@@ -1,0 +1,14 @@
+$colorWhite: #e9e9e9;
+$colorBlack: #262626;
+
+body {
+    color: $colorWhite;
+    background-color: $colorBlack;
+    word-break: break-all;
+    font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+}
