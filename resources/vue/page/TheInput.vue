@@ -19,9 +19,9 @@
     <hr />
     <h2>result</h2>
     <p v-if="!csvData">data is empty.</p>
-    <div class="p-table-outer">
+    <div class="p-table-outer" id="fullScreenTargetElement">
       <div class="p-table-wrap">
-        <table class="table" v-if="csvData">
+        <table class="table" v-if="csvData" ref="dataTable">
           <thead>
             <td
               class="col-xs-1"
@@ -46,6 +46,15 @@
       </div>
     </div>
     <div class="text-center u-p-10">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        :disabled="!isValid"
+        :class="isValid ? 'disabled' : ''"
+        @click="toggleFullScreen"
+      >
+        show full screen
+      </button>
       <button
         type="button"
         class="btn btn-primary"
@@ -118,6 +127,9 @@ export default {
       }
 
       console.log(paylaod)
+    },
+    toggleFullScreen() {
+      document.getElementById('fullScreenTargetElement').requestFullscreen()
     },
   },
 }
