@@ -4,7 +4,32 @@
   "description": "select CSV file then display it on VUE",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^0.21",
+    "bootstrap-vue": "^2.21.2",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^5.0.1",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.32.2",
+    "sass-loader": "^10.1.0",
+    "three": "^0.124.0",
+    "three-device-orientation": "^1.0.3",
+    "three-orbit-controls": "^82.1.0",
+    "three-stereo-effect": "^1.0.14",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
   },
   "repository": {
     "type": "git",
