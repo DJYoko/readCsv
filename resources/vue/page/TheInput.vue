@@ -18,10 +18,10 @@
     </div>
     <hr />
     <h2>result</h2>
-    <p v-if="csvData === ''">data is empty.</p>
-    <div v-else class="p-table-outer">
+    <p v-if="!csvData">data is empty.</p>
+    <div class="p-table-outer">
       <div class="p-table-wrap">
-        <table class="table">
+        <table class="table" v-if="csvData">
           <thead>
             <td
               class="col-xs-1"
@@ -45,6 +45,17 @@
         </table>
       </div>
     </div>
+    <div class="text-center u-p-10">
+      <button
+        type="button"
+        class="btn btn-primary"
+        :disabled="!isValid"
+        :class="isValid ? 'disabled' : ''"
+        @click="onSubmit"
+      >
+        submit
+      </button>
+    </div>
   </div>
 </template>
 
@@ -57,6 +68,9 @@ export default {
     }
   },
   computed: {
+    isValid() {
+      return this.csvData !== ''
+    },
     displayCsvData() {
       const plainData = this.csvData
       const rows = plainData.split('\n')
@@ -95,6 +109,15 @@ export default {
       }
 
       reader.readAsText(_file)
+    },
+    onSubmit() {
+      alert('look console')
+
+      const paylaod = {
+        csvData: this.displayCsvData,
+      }
+
+      console.log(paylaod)
     },
   },
 }
