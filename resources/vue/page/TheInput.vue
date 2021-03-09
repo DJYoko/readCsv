@@ -127,6 +127,8 @@ export default {
       }
 
       console.log(paylaod)
+
+      // send operation would be described here.
     },
     toggleFullScreen() {
       document.getElementById('fullScreenTargetElement').requestFullscreen()
