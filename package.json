@@ -1,0 +1,19 @@
+{
+  "name": "readcsv",
+  "version": "1.0.0",
+  "description": "select CSV file then display it on VUE",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJYoko/readCsv.git"
+  },
+  "author": "DJYoko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DJYoko/readCsv/issues"
+  },
+  "homepage": "https://github.com/DJYoko/readCsv#readme"
+}
