@@ -62,3 +62,12 @@ hr {
 .table {
     color: $colorWhite;
 }
+
+.p-table-outer {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.p-table-wrap {
+    width: 5000px;
+}
