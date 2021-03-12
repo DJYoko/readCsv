@@ -69,6 +69,8 @@
 </template>
 
 <script>
+const csvSplitRegex = new RegExp(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/g)
+
 export default {
   name: 'TheInput',
   data: () => {
@@ -90,7 +92,7 @@ export default {
       rows.shift() // remove header row
 
       return rows.map((rowItem) => {
-        return rowItem.split(',')
+        return rowItem.split(csvSplitRegex)
       })
     },
     displayCsvHeader() {
@@ -99,7 +101,7 @@ export default {
       if (rows.length === 0) {
         return []
       }
-      return rows[0].split(',')
+      return rows[0].split(csvSplitRegex)
     },
   },
   methods: {
