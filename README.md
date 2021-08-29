@@ -2,7 +2,7 @@
 
 a simple function for HTML form.
 
-demo <a href="https://djyoko.github.io/readCsv/" target="_blank">djyoko.github.io/readCsv</a>
+demo [https://djyoko.github.io/readCsv/](https://djyoko.github.io/readCsv/)
 
 ### feature
 
