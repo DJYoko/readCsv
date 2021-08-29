@@ -1,7 +1,7 @@
 # readCsv
 
 a simple function for HTML form.
-demo [https://djyoko.github.io/readCsv/](https://djyoko.github.io/readCsv/){:target="_blank"}
+demo <a href="https://djyoko.github.io/readCsv/" target="_blank">https://djyoko.github.io/readCsv/</a>
 
 ### feature
 
