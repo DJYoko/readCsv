@@ -1,12 +1,7 @@
-import Vue from 'vue'
-import TheInput from '../vue/page/TheInput'
+import { createApp } from 'vue';
+import TheInput from '../vue/page/TheInput';
 
-Vue.config.productionTip = true
-
-new Vue({
-    el: '#appElement',
-    components: {
-        TheInput
-    },
-    template: '<TheInput/>'
-})
+document.addEventListener('DOMContentLoaded', () => {
+  const app = createApp(TheInput);
+  app.mount('#appElement');
+});
